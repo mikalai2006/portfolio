@@ -10,7 +10,7 @@ $padding: 15px;
 
 $screen-sm-max: 768px;
 @mixin sm {
-    @media only screen and (max-device-width: #{$screen-sm-max}) {
+    @media only screen and (max-width: #{$screen-sm-max}) {
         @content;
     }
  }
