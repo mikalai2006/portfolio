@@ -90,6 +90,42 @@ $screen-sm-max: 768px;
                     font-size: 15px;
                 }
             }
+            .btntoggle-info {
+                display: none;
+                float: right;
+                @include sm {
+                    display: block;
+                }
+                &.clicked {
+                    &+div {
+                        @include sm {
+                            display: block;
+                        } 
+                    }
+                }
+            }
+            .btn-see {
+                @include sm {
+                    display: none;
+                }
+            }
+            .left-box {
+                @include sm {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    z-index: 1;
+                    padding: $padding * 2;
+                }
+            }
+            .box-info {
+                @include sm {
+                    display: none;
+                    background: $color_light;
+                    padding: $padding;
+                    border-radius: 5px;
+                }
+            }
         }
     }
     }

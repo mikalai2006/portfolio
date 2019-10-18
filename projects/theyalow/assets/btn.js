@@ -4,7 +4,6 @@ const btnTypex = document.querySelectorAll('.typex');
 const typeClassBtnDefault = 'btn-primary';
 const typeClassBtnActive = 'd-none';
 
-
 function changeActiveBtn(type) {
 
     btnTypex.forEach(function (button) {
@@ -23,7 +22,11 @@ function changeMode(typex) {
         wrapper.style.width = '100%';
         changeActiveBtn(typex);
     } else if (typex === 'mobile') {
-        wrapper.style.width = '640px';
+        if (window.innerWidth <= 640) {
+            wrapper.style.width = '100%';
+        } else {
+            wrapper.style.width = '640px';
+        }
         changeActiveBtn(typex);
     } else {
         window.history.back();

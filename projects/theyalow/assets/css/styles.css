@@ -119,7 +119,7 @@ header nav > ul > li a:hover {
    -moz-background-size:100%; 
    -o-background-size:100%;
     background-size: 100%;
-    
+    background-repeat: no-repeat;
 }
 
 .slider__box--ctl {
@@ -263,6 +263,7 @@ header nav > ul > li a:hover {
 .icons__subwrapper {
     background-image: url('../images/bgicons.png');
     background-repeat: repeat;
+    background-color: #fff;
 }
 .icons__box {
     height:212px;

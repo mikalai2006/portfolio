@@ -1,6 +1,20 @@
+'use strict'
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import style from './styles-sass/styles.scss';
 require('../index.html')
+
+const btnMobileInfo = document.querySelectorAll('.btntoggle-info');
+
+function toggleInfoBtn() {
+
+    btnMobileInfo.forEach(function (button) {
+        button.addEventListener('click', function() {
+           this.classList.toggle('clicked');
+        });
+    });
+
+}
 
 function collapse () {
     //const el = document.querySelectorAll('.collapse-box');
@@ -22,6 +36,8 @@ function collapse () {
     })
 };
 
+
+toggleInfoBtn();
 collapse();
 
 (function() {
